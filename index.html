@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"  content ="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Check Your Nearest Vaccination Centre </title>
+  </head>
+  <link id="stylesheet" href="style.css" rel="stylesheet" />
+  <link id="mystylesheet" href="style.css" rel="stylesheet" />
+  <body>
+    <center>
+      <button class="darkmode" onclick="swapstyle('dark.css')">DARK MODE</button>
+      <button class="lightmode" onclick="swapstyle('style.css')">LIGHT MODE</button>
+      <div id="container">
+        <div class="input">
+          <form>
+            <h4 style="color: red">
+              <u>Search Vaccination Centre By Pincode</u>
+            </h4>
+            <input
+              type="text"
+              id="pincode"
+              placeholder="PINCODE"
+              maxlength="6"
+              autofocus
+              required
+            />
+            <input type="date" id="date" />
+            <span id="testdata"></span>
+            
+          </form>
+        </div>
+        <div style="overflow: auto">
+          <table id="mytable">
+            <thead style="background-color: #825469" >
+              <tr>
+                <th>Date</th>
+                <th>Name Of The Vaccination Centre</th>
+                <th>Address Of The Vaccination Centre</th>
+                <th>Villege/Town/City</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Fee</th>
+                <th>No.of Sessions</th>
+                <th>Vaccine Name</th>
+                <th>Age Limit</th>
+                <th>No of Doses Available</th>
+              </tr>
+            </thead>
+            <tbody id="tb"></tbody>
+          </table>
+        </div>
+      </div>
+      <span id="load"></span>
+    </center>
+  </body>
+  <script src="./script.js"></script>
+  <script>
+    function swapstyle(sheet){
+    document.getElementById('mystylesheet').href = sheet
+    }
+  </script>
+</html>
